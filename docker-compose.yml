@@ -1,0 +1,16 @@
+volumes:
+  springSecTeste:
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: userroot
+      POSTGRES_DB: springSecTeste
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - springSecTeste:/var/lib/postgresql/data
